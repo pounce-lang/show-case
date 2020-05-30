@@ -1,0 +1,45 @@
+body {
+  background-color: #282c34;
+
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 1vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(233, 233, 233);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Feature-parent {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  height: 100%;
+  background-color: #282c34;
+  justify-content: space-evenly;
+}
+
+.Feature-child {
+  /* width: 30%; */
+  min-width: 300px;
+  background-color: rgb(233, 233, 233);
+margin:20px 2px;
+padding:30px;
+}
