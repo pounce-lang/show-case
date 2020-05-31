@@ -2,6 +2,11 @@ body {
   background-color: #282c34;
 
 }
+header>p {
+  position: absolute;
+    left: 237px;
+    top: 57px;
+}
 
 .App {
   /* text-align: center; */
@@ -38,13 +43,11 @@ body {
 }
 
 .Feature-child {
-  /* width: 30%; */
-  max-width: 30%;
-  min-width: 300px;
+  width: 380px;
   background-color: rgb(233, 233, 233);
-margin:2px 2px 20px 2px;
-padding:4px 30px 30px 30px;
-align-self: flex-start;
+  margin:2px 2px 20px 2px;
+  padding:4px 30px 30px 30px;
+  align-self: flex-start;
 }
 
 code.stack {
