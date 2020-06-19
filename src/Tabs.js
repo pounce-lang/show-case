@@ -46,9 +46,13 @@ export const Examples = () => {
         <PounceCat pounceCode="3 2 1 [a b c] [a a * b + c c * -] apply-with" ></PounceCat>
       </div>
       <div className="Feature-child" >
-        <h3>Map</h3>
+        <h3>Map Filter Reduce</h3>
         <p>Map a phrase onto a list.</p>
         <PounceCat pounceCode="[6 3 8 4 5 7 2 9 1] [2 *] map" ></PounceCat>
+        <p>Filter a list.</p>
+        <PounceCat pounceCode="[6 3 8 4 5 7 2 9 1] [2 % 0 ==] filter" ></PounceCat>
+        <p>Reduce.</p>
+        <PounceCat pounceCode="[6 3 8 4 5 7 2 9 1] 1 [*] reduce" ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3>Quicksort</h3>
