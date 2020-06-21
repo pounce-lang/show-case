@@ -7,7 +7,9 @@ export const CorePounces = () => {
     <div className="Feature-parent">
       <div className="Feature-child" >
         <h3>Post-fix</h3>
-        <p>Pounce is a post-fix language. Notice that data (nouns) come first followed by verbs. Adding two and two, the nouns are <code>2 2</code> followed by <code>+</code></p>
+        <p>Pounce is a post-fix language. Notice that data (nouns) come first followed by verbs.
+           For instance, when adding two and two, the nouns are <code> 2 2 </code> followed by the verb <code> + </code>
+           </p>
         <PounceCat pounceCode="2 2 +" ></PounceCat>
       </div>
       <div className="Feature-child" >
@@ -54,8 +56,8 @@ export const CorePounces = () => {
       </div>
       <div className="Feature-child" >
         <h3>Quicksort</h3>
-        <p>Given a list to sort, binary recursion <code>binrec</code> is used to process both sub lists made by <code>split&lt;</code></p>
-        <PounceCat pounceCode="[6 3 8 4 5 7 2 9 1] [size 1 <=] [] [uncons split<] [concat] binrec" ></PounceCat>
+        <p>Given a list to sort, binary recursion <code>binrec</code> is used to process both sub lists made by <code>[&lt;] split</code></p>
+        <PounceCat pounceCode="[6 3 8 4 5 7 2 9 1] [size 1 <=] [] [uncons [>] split] [concat] binrec" ></PounceCat>
       </div>
     </div>
     );

@@ -1299,10 +1299,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@pounce-lang/core@^1.5.1":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@pounce-lang/core/-/core-1.5.4.tgz#37c79f60737e5bcd205662fbd687eb7064f92c7f"
-  integrity sha512-xUZwf1K3nXZs3YSgq53ZQksovIx0pRf5GVVFSJF/eDCDpq2p8m3CHLm+CQ9SXcr9ctUfc330lWq1fC/KLCY2RA==
+"@pounce-lang/core@1.5.6":
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/@pounce-lang/core/-/core-1.5.6.tgz#f2f2cd941a9203a58aee587d41d7e2033cb7a7b0"
+  integrity sha512-ImFJOjbTW3ZONa1cpnKKOAZgIPHSdgJxuiD8PImKULkdfRArY654zIVZgwDtmKHantkfhE6nHkbgsS9yOPAc+w==
   dependencies:
     fbp-types "^0.3.1"
     junify "^1.0.2"

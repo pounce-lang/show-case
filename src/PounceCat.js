@@ -7,8 +7,8 @@ function PounceCat(props) {
   const result = cat.next();
   return (
     <div>
-      running<br/> <code className="prog">[{props.pounceCode}]</code><br/>
-      yeilds:<br/>  <code className="stack" >[{unParse(result.value.stack)}]</code>
+      running<br/> <code className="prog">{props.pounceCode}</code><br/>
+      yeilds:<br/>  <code className="stack" >{unParse(result.value.stack)}</code>
     </div>
   );
 }
