@@ -71,7 +71,7 @@ const CAHCircle = () => {
     return (
         <canvas
             ref={ref}
-            style={{ width: '400px', height: '300px' }}
+            style={{ width: '370px', height: '300px' }}
         />
     );
 };

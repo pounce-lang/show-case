@@ -22,8 +22,8 @@ import { interpreter } from '@pounce-lang/core';
 export const KonvaCanvas = (props) => {
   const cat = interpreter(props.pounceCode);
     return (
-      <Stage  style={{width: 400, height: 300, backgroundColor:"#ffffff"}}
-        width="400" height="300">
+      <Stage  style={{width: 370, height: 300, backgroundColor:"#ffffff"}}
+        width="370" height="300">
         <Layer>
           <Text text="Some text on canvas" fontSize={15} />
           <Rect
