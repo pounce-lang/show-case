@@ -5,7 +5,7 @@ const SVG_HEART_PATH = new Path2D(heartSVG);
 
 export function draw(ctx, element){
   const [shape, x, y, sx, sy, color] = element;
-  console.log(sy, color);
+  // console.log(sy, color);
   switch (shape) {
     case 'circle':
       ctx.arc(x, y, sx, 0, Math.PI * 2, 1);
@@ -24,7 +24,7 @@ export function draw(ctx, element){
       ctx.restore();  
     break;
     default:
-      console.log("failed to draw shape ===", shape);
+      // console.log("failed to draw shape ===", shape);
     break;
   }
 };

@@ -9,15 +9,15 @@ const CanvasPounces = () => {
       <div className="Feature-child" >
         <h3>Canvas Effects</h3>
         <p>Since the Pounce core has no side effects other than the stack, how can we draw on a canvas?
-          One way is to first run a Pounce program and use the output stack (e.g. <code> [circle 100 100 20] [square 200 100 20] [heart 100 100 20 20 FF0000FF] </code>) and 
+          One way is to first run a Pounce program and use the output stack (e.g. <code> [circle 240 130 20] [square 100 200 20] [heart 100 100 20] </code>) and 
           then use a simple interpreter that draws on a canvas. 
         </p>
-        <CanvasPounce pounceCode="[circle 200 200 20] [square 100 200 20] [heart 100 100 20 20 FF0000FF]"></CanvasPounce>
+        <CanvasPounce pounceCode="[circle 240 130 20] [square 100 200 20] [heart 100 100 20 20 FF0000FF]"></CanvasPounce>
       </div>
       <div className="Feature-child" >
         <h3>Canvas drag-n-drop</h3>
-        <p>KonvaCanvas is a canvas helper library that adds feedback from a canvas element. Two of the shapes respond to user drag and drop events.</p>
-        <KonvaCanvas pounceCode="[circle 100 100 20] [square 200 100 20]"></KonvaCanvas>
+        <p>KonvaCanvas is a canvas helper library that adds feedback from a canvas elements. These two shapes respond to user drag and drop events.</p>
+        <KonvaCanvas pounceCode="[circle 100 200 20] [square 200 100 70]"></KonvaCanvas>
       </div>
 
       <div className="Feature-child" >

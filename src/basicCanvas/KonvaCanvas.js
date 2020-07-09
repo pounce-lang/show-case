@@ -19,35 +19,47 @@ import "konva/lib/shapes/Circle";
 import "konva/lib/shapes/Line";
 import { interpreter } from '@pounce-lang/core';
 
+const paintShape = (coords) => {
+  if (coords[0] === 'square') {
+    return  <Rect
+      x={coords[1]}
+      y={coords[2]}
+      width={coords[3]}
+      height={coords[3]}
+      fill="pink"
+      shadowBlur={20}
+      draggable
+    />;
+  }
+  else {
+    return  <Circle
+      x={coords[1]}
+      y={coords[2]}
+      radius={coords[3]}
+      fill="pink"
+      shadowBlur={20}
+      draggable
+    />;
+  }
+  
+};
+
+
+
 export const KonvaCanvas = (props) => {
   const cat = interpreter(props.pounceCode);
-    return (
-      <Stage  style={{width: 370, height: 300, backgroundColor:"#ffffff"}}
-        width="370" height="300">
-        <Layer>
-          <Text text="Some text on canvas" fontSize={15} />
-          <Rect
-            x={20}
-            y={50}
-            width={100}
-            height={100}
-            fill="red"
-            shadowBlur={10}
-          />
-          <Circle x={200} y={100} radius={50} fill="green"  draggable />
-          <Line
-            x={20}
-            y={200}
-            points={[0, 0, 100, 0, 100, 100]}
-            tension={0.5}
-            closed
-            stroke="black"
-            fillLinearGradientStartPoint={{ x: -50, y: -50 }}
-            fillLinearGradientEndPoint={{ x: 50, y: 50 }}
-            fillLinearGradientColorStops={[0, "red", 1, "yellow"]}
-            draggable
-          />
-        </Layer>
-      </Stage>
-    );
-  };
+  const canvasCmds = cat.next().value.stack;
+  console.log('*** canvasCmds ***', canvasCmds);
+  // result.value.stack
+  return (
+    <Stage style={{ width: 370, height: 300, backgroundColor: "#ffffff" }}
+      width={370} height={300}>
+      <Layer>
+        <Text text="( these shapes are draggable :)" fontSize={15} />
+        {
+          canvasCmds.map((coordinate) => paintShape(coordinate))
+        }
+      </Layer>
+    </Stage>
+  );
+};

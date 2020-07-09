@@ -53,7 +53,7 @@ const CAHCircle = () => {
                 );
                 context.fill();
 
-                console.log('*** sinceLast, elapsed ***', sinceLast, elapsed);
+                // console.log('*** sinceLast, elapsed ***', sinceLast, elapsed);
                 last = timestamp;
             }
             if (last === 0 || elapsed < 10) {
