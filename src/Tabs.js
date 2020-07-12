@@ -9,11 +9,11 @@ export const Examples = () => {
           <Tab tabName="Core Words"> 
             <CorePounces></CorePounces>
           </Tab>
-          <Tab tabName="Canvas Dabbling">
+          <Tab tabName="Canvas">
             <CanvasPounces></CanvasPounces>
           </Tab>
-          <Tab tabName="Games and Animation">
-              Content 3
+          <Tab tabName="Audio">
+              Under Construction
           </Tab>
         </Tabs>
     );

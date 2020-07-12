@@ -23,7 +23,7 @@ header>p {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  /* justify-content: center; */
+  /* justify-content: left; */
   font-size: calc(10px + 2vmin);
   color: rgb(233, 233, 233);
 }
@@ -33,13 +33,23 @@ header>p {
 }
 
 .Feature-parent {
+  
   display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
+  flex-flow: row wrap;
+  /* align-content: flex-start; */
   height: 100%;
   background-color: #282c34;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: flex-start;
+  /* align-items: flex-start;  */
+  
+/*   
+  display: flex;
+  flex-flow: column wrap;
+  height: 150vh;
+  background-color: #282c34;
+  align-items: flex-start; 
+  margin-left: 4ch;
+  */
 }
 
 .Feature-child {
@@ -50,6 +60,21 @@ header>p {
   align-self: flex-start;
 }
 
-code.stack {
-  background-color: rgb(207, 204, 178)
+.double-wide {
+  width: 826px;
 }
+
+code.stack {
+  background-color: rgb(207, 204, 178);
+}
+
+.pounceCat-input {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+    padding: 2px 2px 2px 8px;
+    border:none;
+    background-color: rgb(176, 216, 218); 
+    width: 95%;
+    max-width: 95%;
+    min-width: 95%;
+  }

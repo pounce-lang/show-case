@@ -5,6 +5,19 @@ export const CorePounces = () => {
     return(
                    
     <div className="Feature-parent">
+      <div className="Feature-child double-wide" >
+        <h3>Pounce is</h3>
+        <p>Pounce is a Concatenative language, influenced by Forth, Postscript, Joy, Cat and Kitten.          
+        </p>
+        <p>A Concatenative language provides for the "composition of functions" as a first class operation
+           and programs are constructed by composing functions together before application. 
+           For more information on Concatenative languages, 
+           <a href="https://concatenative.org/wiki/view/Concatenative%20language">concatenative.org</a>
+           is a comprehensive resource.
+            Additionally this timeline of Concatenative Programming illustrates their history.
+        </p>
+
+      </div>
       <div className="Feature-child" >
         <h3>Post-fix</h3>
         <p>Pounce is a post-fix language. Notice that data (nouns) come first followed by verbs.
@@ -32,18 +45,27 @@ export const CorePounces = () => {
       </div>
       <div className="Feature-child" >
       <h3>Recursive Words</h3>
-        <p>Here is a definition of 'factorial' as a recursive composition of words. </p>
-        <PounceCat pounceCode="[0 = [drop] [dup 1 - [*] dip fac] if-else] [fac] def  1 5 fac" ></PounceCat>
+      <p>Here is a definition of 'factorial' as a recursive composition of words. </p>
+      <p>Notice that the word <code>fac</code> is used as part of its own composition. As with any recursive function, make sure to use an 'if' clause that tests for the terminal case.</p>
+        <PounceCat pounceCode={
+`[0 = [drop] [dup 1 - [*] dip fac]
+  if-else] [fac] def  1 5 fac`} ></PounceCat>
       </div>
       <div className="Feature-child" >
       <h3><code>linrec</code> for Linear Recursion</h3>
-        <p>Without having to compose and name a recursive word, <code>linrec</code> does this with four phrases.</p>
+        <p>A second version of 'factorial', this time without having to compose and name your own (recursive) word. 
+          Instead, <code>linrec</code> does this with four short phrases.</p>
         <PounceCat pounceCode="5 [dup 0 ==] [1 +] [dup 1 -] [*] linrec" ></PounceCat>
       </div>
       <div className="Feature-child" >
       <h3>Recite with Names</h3>
-        <p>You can recite a phrase with a mapping of the stack elements to a list of names. When a name is used in the phrase, it will be replaced with value from the relative stack position. This is more convenient than doing lots of stack shuffling to achieve the same result.</p>
-        <PounceCat pounceCode="3 2 1 [a b c] [a a * b + c c * -] apply-with" ></PounceCat>
+        <p>You can recite a phrase with a mapping of the stack elements to a list of names. 
+          When a name is used in the phrase, it will be replaced with the value from the relative
+           stack position. This is more convenient than doing lots of stack shuffling
+            to achieve the same result.</p>
+        <p>Here is the fomula for the slope of a line. Yes, this may not be 'point-free', but no variables 
+          are bound in the process, so think of this as coping 'in' of stack values into your phrase.</p>
+        <PounceCat pounceCode="3 2 1 [m x b] [m x * b +] apply-with" ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3>Map Filter Reduce</h3>
