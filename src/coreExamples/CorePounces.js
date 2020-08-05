@@ -10,9 +10,9 @@ export const CorePounces = () => {
         <p>Pounce is a Concatenative language, influenced by Forth, Postscript, Joy, Cat and Kitten.          
         </p>
         <p>A Concatenative language provides for the "composition of functions" as a first class operation
-           and programs are constructed by composing functions together before application. 
+           and programs are constructed by composing functions together. 
            For more information on Concatenative languages, 
-           <a href="https://concatenative.org/wiki/view/Concatenative%20language">concatenative.org</a>
+           <a href="https://concatenative.org/wiki/view/Concatenative%20language"> concatenative.org </a> 
            is a comprehensive resource.
             Additionally this timeline of Concatenative Programming illustrates their history.
         </p>
@@ -30,7 +30,7 @@ export const CorePounces = () => {
         <p>Words can be placed in a list where they are considered as nouns. For example <code>cons</code> is used to make the a list of 10 and * </p>
         <PounceCat pounceCode="10 [*] cons" ></PounceCat>
         <p>A list is sometimes called a 'phrase' when the intent is to recite the phrase as a verb at some later time, like this:</p>
-        <PounceCat pounceCode="5 [10 *] apply" ></PounceCat>
+        <PounceCat pounceCode="5 [10 *] play" ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3>Fibonacci Numbers</h3>
@@ -39,8 +39,8 @@ export const CorePounces = () => {
       </div>
       <div className="Feature-child" >
       <h3>Compose a New Word</h3>
-        <p>To define a new word, two lists are needed: first a composition of words (a phrase) and then the name of the new word wraped in a list. In post-fix style, <code>def</code> comes after and adds this new word. </p>
-        <PounceCat pounceCode="[2 *] [twice] def
+        <p>To define a new word, two lists are needed: first a composition of words (a phrase) and then the name of the new word wraped in a list. In post-fix style, <code>compose</code> comes after and adds this new word. </p>
+        <PounceCat pounceCode="[2 *] [twice] compose
          21 twice" ></PounceCat>
       </div>
       <div className="Feature-child" >
@@ -49,7 +49,7 @@ export const CorePounces = () => {
       <p>Notice that the word <code>fac</code> is used as part of its own composition. As with any recursive function, make sure to use an 'if' clause that tests for the terminal case.</p>
         <PounceCat pounceCode={
 `[0 = [drop] [dup 1 - [*] dip fac]
-  if-else] [fac] def  1 5 fac`} ></PounceCat>
+  if-else] [fac] compose  1 5 fac`} ></PounceCat>
       </div>
       <div className="Feature-child" >
       <h3><code>linrec</code> for Linear Recursion</h3>
@@ -58,14 +58,14 @@ export const CorePounces = () => {
         <PounceCat pounceCode="5 [dup 0 ==] [1 +] [dup 1 -] [*] linrec" ></PounceCat>
       </div>
       <div className="Feature-child" >
-      <h3>Recite with Names</h3>
-        <p>You can recite a phrase with a mapping of the stack elements to a list of names. 
+      <h3>The word Pounce uses named stack items</h3>
+        <p>You can pounce on a phrase with a named mapping of the stack elements. 
           When a name is used in the phrase, it will be replaced with the value from the relative
            stack position. This is more convenient than doing lots of stack shuffling
             to achieve the same result.</p>
         <p>Here is the fomula for the slope of a line. Yes, this may not be 'point-free', but no variables 
           are bound in the process, so think of this as coping 'in' of stack values into your phrase.</p>
-        <PounceCat pounceCode="3 2 1 [m x b] [m x * b +] apply-with" ></PounceCat>
+        <PounceCat pounceCode="3 2 1 [m x b] [m x * b +] pounce" ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3>Map Filter Reduce</h3>

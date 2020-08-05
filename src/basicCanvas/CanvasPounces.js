@@ -17,7 +17,16 @@ const CanvasPounces = () => {
       <div className="Feature-child" >
         <h3>Canvas drag-n-drop</h3>
         <p>KonvaCanvas is a canvas helper library that adds feedback from a canvas elements. These two shapes respond to user drag and drop events.</p>
-        <KonvaCanvas pounceCode="[circle 100 200 20] [square 200 100 70]"></KonvaCanvas>
+        <KonvaCanvas pounceCode={
+          `
+          [uncons uncons pop [id shape xy w] [shape square == [xy [w 2 / +] map] [xy] if-else] pounce] [get-xy] compose
+          [stack-copy [] [get-xy] reduce concat swap drop line swap cons l-1 swap cons] 
+           [make-line] compose 
+          make-line 
+          `}
+          shapes={
+            ` [c-1 circle 100 200 20] [s-1 square 200 100 70] `}
+          ></KonvaCanvas>
       </div>
 
       <div className="Feature-child" >
