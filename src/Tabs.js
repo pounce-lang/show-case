@@ -1,11 +1,15 @@
 import React from 'react';
 import Tabs, { Tab } from 'react-ui-tabs';
-import { CorePounces } from './coreExamples/CorePounces';
+import { IntroPounces } from './introduction/IntroPounces';
+import { CorePounces } from './coreWords/CorePounces';
 import CanvasPounces from './basicCanvas/CanvasPounces';
 
 export const Examples = () => {
     return(
         <Tabs>
+          <Tab tabName="Intro"> 
+            <IntroPounces></IntroPounces>
+          </Tab>
           <Tab tabName="Core Words"> 
             <CorePounces></CorePounces>
           </Tab>
