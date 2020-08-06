@@ -32,24 +32,12 @@ header>p {
   color: #61dafb;
 }
 
-.Feature-parent {
-  
+.Feature-parent {  
   display: flex;
   flex-flow: row wrap;
-  /* align-content: flex-start; */
   height: 100%;
   background-color: #282c34;
   justify-content: flex-start;
-  /* align-items: flex-start;  */
-  
-/*   
-  display: flex;
-  flex-flow: column wrap;
-  height: 150vh;
-  background-color: #282c34;
-  align-items: flex-start; 
-  margin-left: 4ch;
-  */
 }
 
 .Feature-child {
