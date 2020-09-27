@@ -5,9 +5,6 @@
   "homepage": "https://pounce-lang.github.io/show-case/build/",
   "dependencies": {
     "@pounce-lang/core": "^2.0.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "konva": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -36,5 +33,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@testing-library/user-event": "^12.1.6",
+    "webpack": "^4.44.2"
   }
 }

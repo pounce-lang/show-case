@@ -5,17 +5,17 @@
     "main.js.map": "/show-case/build/static/js/main.97a45096.chunk.js.map",
     "runtime-main.js": "/show-case/build/static/js/runtime-main.cc5d4620.js",
     "runtime-main.js.map": "/show-case/build/static/js/runtime-main.cc5d4620.js.map",
-    "static/js/2.a3900588.chunk.js": "/show-case/build/static/js/2.a3900588.chunk.js",
-    "static/js/2.a3900588.chunk.js.map": "/show-case/build/static/js/2.a3900588.chunk.js.map",
+    "static/js/2.81810363.chunk.js": "/show-case/build/static/js/2.81810363.chunk.js",
+    "static/js/2.81810363.chunk.js.map": "/show-case/build/static/js/2.81810363.chunk.js.map",
     "index.html": "/show-case/build/index.html",
-    "precache-manifest.0336fcbd14fb7ac28b6d0a7316e2f2c1.js": "/show-case/build/precache-manifest.0336fcbd14fb7ac28b6d0a7316e2f2c1.js",
+    "precache-manifest.ca26f2836020e6e009d3f3b6c882f501.js": "/show-case/build/precache-manifest.ca26f2836020e6e009d3f3b6c882f501.js",
     "service-worker.js": "/show-case/build/service-worker.js",
     "static/css/main.31b46580.chunk.css.map": "/show-case/build/static/css/main.31b46580.chunk.css.map",
-    "static/js/2.a3900588.chunk.js.LICENSE.txt": "/show-case/build/static/js/2.a3900588.chunk.js.LICENSE.txt"
+    "static/js/2.81810363.chunk.js.LICENSE.txt": "/show-case/build/static/js/2.81810363.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cc5d4620.js",
-    "static/js/2.a3900588.chunk.js",
+    "static/js/2.81810363.chunk.js",
     "static/css/main.31b46580.chunk.css",
     "static/js/main.97a45096.chunk.js"
   ]
