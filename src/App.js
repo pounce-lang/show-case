@@ -16,16 +16,16 @@ function App() {
       </header>
       <Router>
         <nav className="tabs__list">
-          <Link className="tab" to="/">Introduction</Link>
-          <Link className="tab" to="/core">Core Words</Link>
-          <Link className="tab" to="/canvas">Canvas</Link>
-          <Link className="tab" to="/audio">Audio</Link>
+          <Link className="tab" to="intro">Introduction</Link>
+          <Link className="tab" to="core">Core Words</Link>
+          <Link className="tab" to="canvas">Canvas</Link>
+          <Link className="tab" to="audio">Audio</Link>
         </nav>
         <Routes>
-          <Route path="/" element={<IntroPounces />} />
-          <Route path="/core" element={<CorePounces />} />
-          <Route path="/canvas" element={<CanvasPounces />} />
-          <Route path="/audio" element={<h1>Work in progress</h1>} />
+          <Route path="intro" element={<IntroPounces />} />
+          <Route path="core" element={<CorePounces />} />
+          <Route path="canvas" element={<CanvasPounces />} />
+          <Route path="audio" element={<h1>Work in progress</h1>} />
         </Routes>
 
       </Router>

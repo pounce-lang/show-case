@@ -24,15 +24,21 @@ export const CorePounces = () => {
         <PounceCat pounceCode="22 7 /" ></PounceCat>
       </div>
       <div className="Feature-child" >
+        <h3>[Flow] play</h3>
+        <p> The word <code>play</code> enables a phrase as code, here dequoting and 'playing' <code>[2 /]</code> back</p>
+        <PounceCat pounceCode={"7 [2 /] play"} ></PounceCat>
+      </div>
+      <div className="Feature-child" >
         <h3>[Flow] pounce</h3>
         <p> The word <code>pounce</code> is a convenient way to copy stack items into and <code>play</code> a phrase</p>
         <PounceCat pounceCode={`# y = mx + b
 4 0 0.5 [m b x] [m x * b +] pounce`} ></PounceCat>
       </div>
       <div className="Feature-child" >
-        <h3></h3>
-        <p> <code>  </code> </p>
-        <PounceCat pounceCode="" ></PounceCat>
+        <h3>[Arithmetic] Discrete words</h3>
+        <p> math AND <code> &&</code> OR <code> ||</code> and NOT <code> !</code> </p>
+        <PounceCat pounceCode="true false ||" ></PounceCat>
+        <PounceCat pounceCode="true false && !" ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3></h3>
