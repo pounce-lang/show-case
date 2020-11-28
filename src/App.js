@@ -11,7 +11,7 @@ function App() {
   const [first, setFirst] = useState(true);
 
   if (first && window.location.pathname !== "/intro") {
-    window.location.pathname = "/intro";
+//    window.location.pathname = "/intro";
     setFirst(false);
   }
   return (
