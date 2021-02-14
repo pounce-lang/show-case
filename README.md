@@ -1,3 +1,11 @@
+# Show case for Pounce-lang
+
+[Pounce-lang show case](https://pounce-lang.github.io/show-case/build/index.html) is a collection of interactive Pounce programming examples.
+Descriptions of how the language operates are included with each example and susequent examples build off of the previous.
+
+For more information about Pounce also see the [core documentation](https://github.com/pounce-lang/core/tree/master/docs).
+
+## bootstraped with
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
