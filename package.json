@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://pounce-lang.github.io/show-case/build/",
   "dependencies": {
-    "@pounce-lang/core": "^2.0.4",
+    "@pounce-lang/core": "^2.1.1",
     "konva": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
