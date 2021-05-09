@@ -8,6 +8,9 @@ export const IntroPounces = () => {
         <h3>Pounce is Concatenative</h3>
         <p>Pounce is a Concatenative language, influenced by Forth, Postscript, Joy, Cat and Kitten.</p>
         <p>A Concatenative language provides for the "composition of functions" as a first class operation and programs are constructed by composing functions together. For more information on Concatenative languages,&nbsp; <a href="https://concatenative.org/wiki/view/Concatenative%20language" target="_top">concatenative.org</a> is a comprehensive resource. Additionally this timeline of Concatenative Programming illustrates their history.</p>
+        <p>Examples are interactive so you can edit the code and see result (try entering 2 2 + below):</p>
+        <PounceCat pounceCode="1 1 +" ></PounceCat>
+        <p>Enjoy exploring Pounce!</p>
       </div>
       <div className="Feature-child" >
         <h3>Post-fix</h3>
