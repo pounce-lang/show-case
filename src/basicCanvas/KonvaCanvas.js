@@ -23,7 +23,7 @@ import { parse, unParse , interpreter} from '@pounce-lang/core';
 const paintElement = (adjust, coords) => {
   switch (coords[1]) {
     case 'square':
-      return <Rect
+      return (<Rect
         x={coords[2]}
         y={coords[3]}
         width={coords[4]}
@@ -37,8 +37,8 @@ const paintElement = (adjust, coords) => {
           adjust(newCoords);
         }}
       //onDragEnd
-      />;
-      break;
+      />);
+      // break;
     case 'circle':
       return <Circle
         x={coords[2]}
@@ -53,14 +53,14 @@ const paintElement = (adjust, coords) => {
           adjust(newCoords);
         }}
       />;
-      break;
+      // break;
     case 'line':
       return <Line points={[coords[2], coords[3], coords[4], coords[5]]}
         stroke='red'
         strokeWidth={15}
         lineCap='round'
         lineJoin='round' />;
-      break;
+      // break;
     default:
   }
 };

@@ -1,8 +1,8 @@
 {
   "name": "pounce-lang-show-case",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
-  "homepage": "https://pounce-lang.github.io/show-case/build/",
+  "homepage": "/",
   "dependencies": {
     "@pounce-lang/core": "^2.1.1",
     "konva": "^7.0.0",

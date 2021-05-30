@@ -41,36 +41,6 @@ export const CorePounces = () => {
         <PounceCat pounceCode="true false && !" ></PounceCat>
       </div>
       <div className="Feature-child" >
-        <h3></h3>
-        <p> <code>  </code> </p>
-        <PounceCat pounceCode="" ></PounceCat>
-      </div>
-      <div className="Feature-child" >
-        <h3></h3>
-        <p> <code>  </code> </p>
-        <PounceCat pounceCode="" ></PounceCat>
-      </div>
-      <div className="Feature-child" >
-        <h3></h3>
-        <p> <code>  </code> </p>
-        <PounceCat pounceCode="" ></PounceCat>
-      </div>
-      <div className="Feature-child" >
-        <h3></h3>
-        <p> <code>  </code> </p>
-        <PounceCat pounceCode="" ></PounceCat>
-      </div>
-      <div className="Feature-child" >
-        <h3></h3>
-        <p> <code>  </code> </p>
-        <PounceCat pounceCode="" ></PounceCat>
-      </div>
-      <div className="Feature-child" >
-        <h3></h3>
-        <p> <code>  </code> </p>
-        <PounceCat pounceCode="" ></PounceCat>
-      </div>
-      <div className="Feature-child" >
         <h3>[Introspect] word signature</h3>
         <p> <code>word</code> looks up a word signature</p>
         <PounceCat pounceCode="[dup] word" ></PounceCat>

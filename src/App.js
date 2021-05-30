@@ -28,6 +28,7 @@ function App() {
           <Link className="tab" to="audio">Audio</Link>
         </nav>
         <Routes>
+          <Route path="" element={<IntroPounces />} />
           <Route path="intro" element={<IntroPounces />} />
           <Route path="core" element={<CorePounces />} />
           <Route path="canvas" element={<CanvasPounces />} />

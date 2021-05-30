@@ -4,7 +4,7 @@ const heartSVG = "M0 20 v-20 h20 a10,10 9 0,1 0,20 a10,10 9 0,1 -20,0 z"
 const SVG_HEART_PATH = new Path2D(heartSVG);
 
 export function draw(ctx, element){
-  const [shape, x, y, sx, sy, color] = element;
+  const [shape, x, y, sx] = element;
   // console.log(sy, color);
   switch (shape) {
     case 'circle':
