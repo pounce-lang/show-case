@@ -80,7 +80,7 @@ export const IntroPounces = () => {
       <div className="Feature-child" >
         <h3>Quicksort strings</h3>
         <p>Sort a list of strings with binary recursion. <code>binrec</code> is used to process both sub lists made by <code>[&gt;] split</code></p>
-        <PounceCat pounceCode="[e b a g f h cc i d] [size 1 <=] [] [uncons [>] split] [concat] binrec" ></PounceCat>
+        <PounceCat pounceCode="[e b a g f h c i d] [size 1 <=] [] [uncons [>] split] [concat] binrec" ></PounceCat>
       </div>
     </div>
     );

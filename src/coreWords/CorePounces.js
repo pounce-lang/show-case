@@ -11,15 +11,10 @@ export const CorePounces = () => {
 </p><PounceCat pounceCode="words" ></PounceCat></div>
       <div className="Feature-child" >
         <h3>[Arithmetic] + - </h3>
-        <p>Words <code>+</code> and <code>-</code> compose with numbers to produce a number (the sum or difference).
+        <p>basic arithmetic with words <code>+</code> <code>-</code> <code>*</code> and <code>/</code>.
         </p>
         <PounceCat pounceCode="22 7 +" ></PounceCat>
         <PounceCat pounceCode="22 7 -" ></PounceCat>
-      </div>
-      <div className="Feature-child" >
-        <h3>[Arithmetic] * / </h3>
-        <p>Words <code>*</code> and <code>/</code> compose with numbers to produce a number (the product or ratio) or an exception.
-        </p>
         <PounceCat pounceCode="22 7 *" ></PounceCat>
         <PounceCat pounceCode="22 7 /" ></PounceCat>
       </div>
