@@ -4,7 +4,7 @@ import logo from './pounce07.png';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { IntroPounces } from "./introduction/IntroPounces";
 import { CorePounces } from "./coreWords/CorePounces";
-import CanvasPounces from './basicCanvas/CanvasPounces';
+import CanvasPounces from './canvasPounce/CanvasPounces';
 import './App.css';
 
 function App() {
