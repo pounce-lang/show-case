@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { interpreter , unParse} from '@pounce-lang/core';
 import './App.css';
 import nextId from './nextId';
-// import * as r from 'ramda';
 
 const PounceCat = (props) => {
   const [src, setSrc] = useState(props.pounceCode);
