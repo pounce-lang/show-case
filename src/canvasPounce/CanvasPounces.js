@@ -1,6 +1,7 @@
 import React from 'react';
 import LinearPounce from './LinearPounce';
 import { useState } from 'react';
+import GamePlay from './GamePlay';
 
 const CanvasPounces = () => {
 
@@ -21,7 +22,12 @@ const CanvasPounces = () => {
         </p>
         <LinearPounce pounceCode={src}></LinearPounce>
       </div>
-      
+      <div className="Feature-child" >
+        <h3>Animation basic test </h3>
+        <p><code>WIP</code>
+        </p>
+        <GamePlay ></GamePlay>
+      </div>
     </div>
   );
 };
