@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as r from 'ramda';
-import { interpreter } from '@pounce-lang/core';
+import { interpreter, parse } from '@pounce-lang/core';
 
 function draw(ctx, element) {
     if (!element || element.length < 1 || element[0].length < 3) {
@@ -30,7 +30,8 @@ function draw(ctx, element) {
 
 export function useAnimatedCanvas(pounceState, animationStep, canvasWidth, canvasHeight){
     let ref = useRef();
-
+    let pounceStack = typeof pounceState === 'string' ? parse(pounceState) : pounceState;
+    let pounceProgram = typeof animationStep === 'string' ? parse(animationStep) : animationStep;
     useEffect(() => {
         let canvas = ref.current;
         let ctx = canvas.getContext('2d');
@@ -58,7 +59,7 @@ export function useAnimatedCanvas(pounceState, animationStep, canvasWidth, canva
             const sinceLast = timestamp - last;
             if (sinceLast > 100) {
                 // apply animation step
-                const program = r.concat(pounceState, animationStep);
+                const program = r.concat(pounceStack, pounceProgram);
                 //console.log(program);
                 const cat = interpreter(program);
                 
@@ -88,6 +89,6 @@ export function useAnimatedCanvas(pounceState, animationStep, canvasWidth, canva
         };
 
        
-    }, [ref, animationStep, pounceState]);
+    }, [ref, pounceStack, pounceProgram]);
     return [ ref ];
 }

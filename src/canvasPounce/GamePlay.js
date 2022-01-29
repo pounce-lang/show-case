@@ -1,14 +1,14 @@
 import { useAnimatedCanvas } from "./useAnimatedCanvas";
 
-const GamePlay = () => {
+const GamePlay = ({pounceStack, pounceProgram, canvasWidth, canvasHeight}) => {
     const [ref] = useAnimatedCanvas(
-        [[[100, 100, 0],[40, 40],[60, 50],[40, 60]]], 
-        [0, 'outAt', 2, 'outAt', 3, '+', 2, 'inAt', 0, 'inAt'], 370, 300);
+        pounceStack, pounceProgram, canvasWidth, canvasHeight);
 
     return (
         <canvas
             ref={ref}
-            style={{ width: '370px', height: '300px' }}
+            style={{ width: canvasWidth, height: canvasHeight }}
+            width={canvasWidth} height={canvasHeight}
         />
     );
 };
