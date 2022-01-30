@@ -10,7 +10,10 @@ const CanvasPounces = () => {
 [[100 100 0][8 3][0 70][56 100][56 80][100 40][40 30][50 10]]`);
 const [pounceAmimation, setPounceAnimation] = useState(
   `[0 outAt 2 outAt 3 + 2 inAt 0 outAt 700 % 1 + 0 inAt 1 outAt 1 - dup 0 < [drop 400][] if-else 1 inAt 0 inAt] dup dip2 play`);
-  return (
+  const [pounceKeyHandler, setPounceKeyHandler] = useState(
+    //``);
+    `[0 outAt 2 outAt 3 + 2 inAt 0 outAt 700 % 1 + 0 inAt 1 outAt 1 - dup 0 < [drop 400][] if-else 1 inAt 0 inAt] dip2`);
+    return (
     <div className="Feature-parent">
       <div className="Feature-child double-wide" >
         <h3>Asteroids</h3>
@@ -28,6 +31,7 @@ const [pounceAmimation, setPounceAnimation] = useState(
         ></textarea>
         </p>
         <GamePlay pounceStack={src} pounceProgram={pounceAmimation}
+          pounceKeyHandler={pounceKeyHandler}
           canvasWidth={792} canvasHeight={400}
           ></GamePlay>
       </div>

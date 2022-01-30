@@ -1,18 +1,18 @@
 import { useAnimatedCanvas } from "./useAnimatedCanvas";
 
 
-const GamePlay = ({ pounceStack, pounceProgram, canvasWidth, canvasHeight }) => {
+const GamePlay = ({ pounceStack, pounceProgram, pounceKeyHandler, canvasWidth, canvasHeight }) => {
     const [ref, keyEventTrigger] = useAnimatedCanvas(
-        pounceStack, pounceProgram, canvasWidth, canvasHeight);
+        pounceStack, pounceProgram, pounceKeyHandler, canvasWidth, canvasHeight);
 
     return (
         <canvas
             tabIndex="0"
             onKeyDownCapture={(e) => {
-                console.log(e.key);
+                // console.log(e.key);
                 keyEventTrigger(e.key);
-                e.stopPropagation();
-                e.nativeEvent.stopImmediatePropagation();
+                // e.stopPropagation();
+                // e.nativeEvent.stopImmediatePropagation();
             }}
             ref={ref}
             style={{ width: canvasWidth, height: canvasHeight }}
