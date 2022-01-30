@@ -30,6 +30,8 @@ function draw(ctx, element) {
 
 export function useAnimatedCanvas(pounceState, animationStep, canvasWidth, canvasHeight){
     let ref = useRef();
+    let key = '0';
+    let lastKey = useRef('0');
     let pounceStack = typeof pounceState === 'string' ? parse(pounceState) : pounceState;
     let pounceProgram = typeof animationStep === 'string' ? parse(animationStep) : animationStep;
     useEffect(() => {
@@ -57,7 +59,7 @@ export function useAnimatedCanvas(pounceState, animationStep, canvasWidth, canva
             }
             const elapsed = (timestamp - start) /1000;
             const sinceLast = timestamp - last;
-            if (sinceLast > 100) {
+            if (sinceLast > 200) {
                 // apply animation step
                 const program = r.concat(pounceStack, pounceProgram);
                 //console.log(program);
@@ -78,17 +80,29 @@ export function useAnimatedCanvas(pounceState, animationStep, canvasWidth, canva
                 // console.log('*** sinceLast, elapsed ***', sinceLast, elapsed);
                 last = timestamp;
             }
-            if (last === 0 || elapsed < 100) {
+            //if (last === 0 || elapsed < 100) {
                 requestId = requestAnimationFrame(render);
+            //}
+
+            if(key !== lastKey) {
+              console.log(`render ${key}`);
+              lastKey = '0';
+              key = '0';
             }
-        };
-        render(0);
+          };
+
+          render(0);
 
         return () => {
             cancelAnimationFrame(requestId);
         };
 
        
-    }, [ref, pounceStack, pounceProgram]);
-    return [ ref ];
+    }, [ref, pounceStack, pounceProgram, key]);
+
+    const keyEventTrigger = (k) => {
+      console.log(`got ${key}`);
+      key = k;
+    }
+    return [ ref, keyEventTrigger ];
 }
