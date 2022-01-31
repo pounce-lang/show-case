@@ -58,7 +58,7 @@ export function useAnimatedCanvas(pounceState, animationStep, pounceKeyHandler, 
       if (start === 0 && timestamp !== 0) {
         start = timestamp;
       }
-      const elapsed = (timestamp - start) / 1000;
+      // const elapsed = (timestamp - start) / 1000;
       const sinceLast = timestamp - last;
       if (sinceLast > 200) {
         // apply animation step
