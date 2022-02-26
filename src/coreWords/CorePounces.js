@@ -23,9 +23,18 @@ export const CorePounces = () => {
         <p> The word <code>play</code> enables a phrase as code, here dequoting and 'playing' <code>[2 /]</code> back</p>
         <PounceCat pounceCode={"7 [2 /] play"} ></PounceCat>
       </div>
+      <div className="Feature-child double-wide" >
+        <h3>[Flow] crouch</h3>
+        <p> The word <code>crouch</code> copies stack items into a phrase on the stack </p>
+        <p> Here we are baking in the 'm' and 'b' parameters into an equation for a line. The resulting phrase could be played later with some 'x' on the stack</p>
+        <PounceCat pounceCode={`# y = mx + b
+4 0 [m b] [[x] [m x * b +] pounce] crouch`} ></PounceCat>
+<p> Or this phrase could be mapped onto a list of 'x' values, yielding a list of 'y' values</p>
+        <PounceCat pounceCode={`[1 2 3] [[x] [4 x * 0 +] pounce] map`} ></PounceCat>
+      </div>
       <div className="Feature-child" >
         <h3>[Flow] pounce</h3>
-        <p> The word <code>pounce</code> is a convenient way to copy stack items into and <code>play</code> a phrase</p>
+        <p> The word <code>pounce</code> copies stack items into a <code>[phrase]</code>, just like crouch, then immediately <code>play</code>s that phrase</p>
         <PounceCat pounceCode={`# y = mx + b
 4 0 0.5 [m b x] [m x * b +] pounce`} ></PounceCat>
       </div>
