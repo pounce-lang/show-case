@@ -8,7 +8,7 @@ export const IntroPounces = () => {
         <h3>Pounce is Concatenative</h3>
         <p>Pounce is a Concatenative language, influenced by Forth, Postscript, Joy, Cat and Kitten.</p>
         <p>A Concatenative language provides for the "composition of functions" as a first class operation and programs are constructed by composing functions together. For more information on Concatenative languages,&nbsp; <a href="https://concatenative.org/wiki/view/Concatenative%20language" target="_top">concatenative.org</a> is a comprehensive resource. Additionally <a href="https://rosettacode.org/wiki/Category:Programming_paradigm/Concatenative">the concatenative programming paradigm</a> </p>
-        <p>Examples are interactive (see <code>code in blue boxes</code>) so you can edit the code and see result below (try entering 21 2 * below):</p>
+        <p>Examples are interactive (<code>code in blue boxes</code>) so you can edit the code (try entering <code>21 2 *</code> below) and see <code class="stack">results in the orange box</code> below.</p>
         <PounceCat pounceCode="1 1 +" ></PounceCat>
         <p>Enjoy exploring Pounce!</p>
       </div>
@@ -43,8 +43,7 @@ export const IntroPounces = () => {
       <h3>Recursive Words</h3>
       <p>Here is a definition of 'factorial' as a recursive composition of words. </p>
       <p>Notice that the word <code>fac</code> is used as part of its own composition. As with any recursive function, make sure to use an 'if' clause that tests for the terminal case.</p>
-        <PounceCat pounceCode={
-`[0 = [drop] [dup 1 - [*] dip fac]
+        <PounceCat pounceCode={`[0 = [drop] [dup 1 - [*] dip fac]
   if-else] [fac] compose  1 5 fac`} ></PounceCat>
       </div>
       <div className="Feature-child" >

@@ -17,7 +17,7 @@ const PounceCat = (props) => {
         <option value={props.pounceCode} label="(original code example)" ></option>
       </datalist>
       <br/>
-      yields:<br/>  <div  style={{width:'95.5%', backgroundColor: "rgb(207, 204, 178)", padding: "2px 2px 2px 8px"}}><code className="stack" >{unParse(result.value.stack)}</code>
+      yields:<br/>  <div  style={{width:'95.5%', backgroundColor: "rgb(229 206 39)", padding: "2px 2px 2px 8px"}}><code className="stack" >{unParse(result.value.stack)}</code>
       </div>
     </div>
   );

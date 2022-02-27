@@ -53,7 +53,7 @@ header>p {
 }
 
 code.stack {
-  background-color: rgb(207, 204, 178);
+  background-color: rgb(229 206 39);
 }
 
 .pounceCat-input {
@@ -61,7 +61,7 @@ code.stack {
   font-size: 16px;
     padding: 2px 2px 2px 8px;
     border:none;
-    background-color: rgb(176, 216, 218); 
+    background-color: rgb(176 200 255); 
     width: 95%;
     max-width: 95%;
     min-width: 95%;
