@@ -9,10 +9,9 @@ const PounceCat = (props) => {
   const [dlId] = useState(nextId("pounceCatDatalist"));
   const cat = interpreter(src);
   const result = runPounce(cat);
-  
   return (
     <div>
-      running<br/> <code className="prog">{inputPounce(src, setSrc, dlId)}</code>
+      running:<br/> <div className="prog">{inputPounce(src, setSrc, dlId)}</div>
       <datalist id={dlId}>
         <option value={props.pounceCode} label="(original code example)" ></option>
       </datalist>
@@ -23,19 +22,15 @@ const PounceCat = (props) => {
   );
 };
 
+const lineCount = (s) => {
+  return s.split("\n").length;
+};
+
 const inputPounce = (src, setSrc, dlId) => {
-  if (src.length < 36) {
-    return (<input type="text" 
-    className="pounceCat-input"
-    // size={props.pounceCode.length}
-    value={src} 
-    onChange={(e)=>setSrc(e.target.value)} 
-    list={dlId}
-    spellCheck="false" />);
-  }
   return (<textarea
     className="pounceCat-input"
      wrap="true" value={src} 
+     rows={lineCount(src)}
      onChange={(e)=>setSrc(e.target.value)} 
      spellCheck="false" 
      ></textarea>);
