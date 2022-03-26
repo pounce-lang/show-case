@@ -25,12 +25,12 @@ export const CorePounces = () => {
       </div>
       <div className="Feature-child double-wide" >
         <h3>[Flow] crouch</h3>
-        <p> The word <code>crouch</code> copies stack items into a phrase on the stack </p>
-        <p> Here we are baking in the 'm' and 'b' parameters into an equation for a line. The resulting phrase could be played later with some 'x' on the stack</p>
+        <p> The word <code>crouch</code> copies named stack items into a phrase. </p>
+        <p> Crouch consumes stack elements and copies those values in. This example, the values for 'm' and 'b' are from the stack and the resulting phrase is funciton for a specific line, to be combined with some 'x' value on the stack later.</p>
         <PounceCat pounceCode={`# y = mx + b
-4 0 [m b] [[x] [m x * b +] pounce] crouch`} ></PounceCat>
+4 0 [m b] [m * b +] crouch`} ></PounceCat>
 <p> Or this phrase could be mapped onto a list of 'x' values, yielding a list of 'y' values</p>
-        <PounceCat pounceCode={`[1 2 3] [[x] [4 x * 0 +] pounce] map`} ></PounceCat>
+        <PounceCat pounceCode={`[1 2 3] [4 * -1 +] map`} ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3>[Flow] pounce</h3>
