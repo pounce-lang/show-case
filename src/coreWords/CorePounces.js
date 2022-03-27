@@ -28,7 +28,7 @@ export const CorePounces = () => {
         <p> The word <code>crouch</code> copies named stack items into a phrase. </p>
         <p> Crouch consumes stack elements and copies those values in. This example, the values for 'm' and 'b' are from the stack and the resulting phrase is funciton for a specific line, to be combined with some 'x' value on the stack later.</p>
         <PounceCat pounceCode={`# y = mx + b
-4 0 [m b] [m * b +] crouch`} ></PounceCat>
+4 -1 [m b] [m * b +] crouch`} ></PounceCat>
 <p> Or this phrase could be mapped onto a list of 'x' values, yielding a list of 'y' values</p>
         <PounceCat pounceCode={`[1 2 3] [4 * -1 +] map`} ></PounceCat>
       </div>
@@ -49,6 +49,7 @@ export const CorePounces = () => {
         <p> <code>word</code> looks up a word signature</p>
         <PounceCat pounceCode="[dup] word" ></PounceCat>
       </div>
+      
     </div>
   );
 };
