@@ -47,8 +47,9 @@ const CanvasPounces = () => {
         <h3>Sparklines of Lists</h3>
         <p> Experimental: Sparklines help you see the result of <code>map</code> on lists of data.</p>
         <PounceSparkline pounceCode={`[1 2 3 4 5 6 7 8 9] dup 
-[5 - abs] map dup
-[-1 * 3 +] map  dup
+[5 -] map dup
+[abs] map dup
+[-1 * 2 +] map  dup
 [0 max] map
 `} ></PounceSparkline>
       </div>

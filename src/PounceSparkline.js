@@ -13,15 +13,19 @@ const PounceSparkline = (props) => {
   return (
     <div>
       running:<br /> <div className="prog">{inputPounce(src, setSrc, dlId)}</div>
-      <p>{unParse(result?.value?.stack)}</p>
       <p>the results of map {result?.value?.stack?.map(g => {
-        console.log(typeof g);
         if (Array.isArray(g)) {
+          // want a zero line, but what I suspect is a bug in react-sparklines (can be) undone.
+          const max = g.reduce((a, i) => a < i ? i : a, 0);
+          const min = g.reduce((a, i) => a > i ? i : a, max);
+          const range =  (max - min) == 0 ? 0.001 : (max - min);
+          const zeroVec = range + (min-0); 
+          const lineVal = (zeroVec/range) * 10
           return (
             <Sparklines data={g} width={60} height={20} margin={5}
             svgWidth={70} svgHeight={30}>
               <SparklinesLine />
-              <SparklinesReferenceLine type="custom" value={10} />
+              <SparklinesReferenceLine type="custom" value={lineVal} />
             </Sparklines>);
         }
         else {
@@ -29,6 +33,8 @@ const PounceSparkline = (props) => {
         }
       }
       )}</p>
+      <div  style={{width:'95.5%', fontSize:12, backgroundColor: "rgb(229 206 39)", padding: "2px 2px 2px 8px"}}><code className="stack" >{unParse(result.value.stack)}</code>
+      </div>
     </div>
   );
 };
