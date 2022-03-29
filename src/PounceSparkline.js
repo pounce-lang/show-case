@@ -18,7 +18,7 @@ const PounceSparkline = (props) => {
           // want a zero line, but what I suspect is a bug in react-sparklines (can be) undone.
           const max = g.reduce((a, i) => a < i ? i : a, 0);
           const min = g.reduce((a, i) => a > i ? i : a, max);
-          const range =  (max - min) == 0 ? 0.001 : (max - min);
+          const range =  (max - min) === 0 ? 0.001 : (max - min);
           const zeroVec = range + (min-0); 
           const lineVal = (zeroVec/range) * 10
           return (
