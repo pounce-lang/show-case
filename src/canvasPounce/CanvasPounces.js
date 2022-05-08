@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import GamePlay from './GamePlay';
 import PounceSparkline from '../PounceSparkline';
-import SparkAnimation from '../SparkAnimation';
+// import SparkAnimation from '../SparkAnimation';
 
 const CanvasPounces = () => {
 
@@ -62,11 +62,11 @@ const CanvasPounces = () => {
  map
 `} ></PounceSparkline>
       </div>
-      <div className="Feature-child" >
+      {/* <div className="Feature-child" >
         <h3>Sparkline Animations</h3>
         <p>Super Experimental: Animation of Sparklines as a function of time.</p>
         <SparkAnimation pounceCode={" [1 2 3 4 5 6 7 8 9] swap [] cons [+ 9 %] concat play"} ></SparkAnimation>
-      </div>
+      </div> */}
 
       <div className="Feature-child" >
         <h3>Animation basic test </h3>
