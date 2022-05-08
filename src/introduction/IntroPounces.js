@@ -54,7 +54,7 @@ export const IntroPounces = () => {
         <PounceCat pounceCode={`5 [dup 0 ==] [1 +] [dup 1 -] [*] linrec`} ></PounceCat>
       </div>
       <div className="Feature-child double-wide" >
-        <h3>The words <code>crouch</code> and <code>pounce</code> allow references to stack values</h3>
+        <h3>The words <code>crouch</code> and <code>pounce</code> allow references to stack values by name</h3>
         <p>The order of stack values is important, so <code>crouch</code> and <code>pounce</code> let you refer to them byh name.
           These are not variables, more like 'named' stack items.</p>
         <p>For example: if <code>5 7</code> are on the stack. A list of names <code>[a b]</code> a is matched with 5 and b with 7</p>

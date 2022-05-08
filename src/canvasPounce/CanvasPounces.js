@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import GamePlay from './GamePlay';
 import PounceSparkline from '../PounceSparkline';
+import SparkAnimation from '../SparkAnimation';
 
 const CanvasPounces = () => {
 
@@ -45,13 +46,26 @@ const CanvasPounces = () => {
       </div>
       <div className="Feature-child" >
         <h3>Sparklines of Lists</h3>
-        <p> Experimental: Sparklines help you see the result of <code>map</code> on lists of data.</p>
+        <p> Experimental: Sparklines of <code>map</code> operations on lists (i.e. arrays of data).</p>
         <PounceSparkline pounceCode={`[1 2 3 4 5 6 7 8 9] dup 
 [5 -] map dup
 [abs] map dup
 [-1 * 2 +] map  dup
+[0 max] map dup
+[3 -] map dup
+[abs] map dup
+[-1 * -9 +] map  dup
 [0 max] map
+[] 0 [.314 + dup [push] dip ] 20 times drop
+[sin]
+[.628 +] swap concat [dup * .5 -] concat
+ map
 `} ></PounceSparkline>
+      </div>
+      <div className="Feature-child" >
+        <h3>Sparkline Animations</h3>
+        <p>Super Experimental: Animation of Sparklines as a function of time.</p>
+        <SparkAnimation pounceCode={" [1 2 3 4 5 6 7 8 9] swap [] cons [+ 9 %] concat play"} ></SparkAnimation>
       </div>
 
       <div className="Feature-child" >

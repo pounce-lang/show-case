@@ -17,7 +17,6 @@ const GamePlay = ({ pounceStack, pounceProgram, pounceKeyHandler, canvasWidth, c
             ref={ref}
             style={{ width: canvasWidth, height: canvasHeight }}
             width={canvasWidth} height={canvasHeight}
-
         />
     );
 };

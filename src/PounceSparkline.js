@@ -13,14 +13,15 @@ const PounceSparkline = (props) => {
   return (
     <div>
       running:<br /> <div className="prog">{inputPounce(src, setSrc, dlId)}</div>
-      <p>the results of map {result?.value?.stack?.map(g => {
+      <p> {result?.value?.stack?.map(g => {
         if (Array.isArray(g)) {
           // want a zero line, but what I suspect is a bug in react-sparklines (can be) undone.
-          const max = g.reduce((a, i) => a < i ? i : a, 0);
+          const max = g.reduce((a, i) => a < i ? i : a, -99999);
           const min = g.reduce((a, i) => a > i ? i : a, max);
-          const range =  (max - min) === 0 ? 0.001 : (max - min);
-          const zeroVec = range + (min-0); 
-          const lineVal = (zeroVec/range) * 10
+          const range = (max - min);
+          const zeroVec = range + min; 
+          const lineVal = range < 0.00001 ? 5 + min: (zeroVec/range) * 10
+          // console.log(max, min, range, "|", zeroVec, lineVal);
           return (
             <Sparklines data={g} width={60} height={20} margin={5}
             svgWidth={70} svgHeight={30}>
