@@ -13,8 +13,8 @@ const PounceCat = (props) => {
     result = runPounce(cat);
   }
   catch(e) {
-    console.error("Error in parse or run:", e);
-    result = [];
+    console.log("Error in parse or run:", e);
+    result = {value:{stack:[]}};
   }
   return (
     <div>
