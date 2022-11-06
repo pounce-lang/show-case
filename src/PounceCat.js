@@ -7,15 +7,15 @@ import nextId from './nextId';
 const PounceCat = (props) => {
   const [src, setSrc] = useState(props.pounceCode);
   const [dlId] = useState(nextId("pounceCatDatalist"));
-  let cat;
+  let cat, result;
   try {
     cat = interpreter(src);
+    result = runPounce(cat);
   }
   catch(e) {
-    console.error(e);
-    return;
+    console.error("Error in parse or run:", e);
+    result = [];
   }
-  const result = runPounce(cat);
   return (
     <div>
       running:<br/> <div className="prog">{inputPounce(src, setSrc, dlId)}</div>
@@ -45,13 +45,13 @@ const inputPounce = (src, setSrc, dlId) => {
 }
 
 const runPounce = (cat) => {
-  try {
+  // try {
     return cat.next();
-  }
-  catch(e) {
-    console.error(e);
-    return ({error: true, value: {stack: ["Exception: Unable to run Pounce code."]}});
-  }
+  // }
+  // catch(e) {
+  //   console.error(e);
+  //   return ({error: true, value: {stack: ["Exception: Unable to run Pounce code."]}});
+  // }
 };
 
 export default PounceCat;
