@@ -51,7 +51,7 @@ export const IntroPounces = () => {
         <h3><code>linrec</code> for Linear Recursion</h3>
         <p>A second version of 'factorial', this time without having to compose and name your own (recursive) word.
           Instead, linear recursion (<code>linrec</code>) does this with four short phrases.</p>
-        <PounceCat pounceCode={`5 [dup 0 ==] [1 +] [dup 1 -] [*] linrec`} ></PounceCat>
+        <PounceCat pounceCode={`5 [1 =] [] [dup 1 -] [*] linrec`} ></PounceCat>
       </div>
       <div className="Feature-child double-wide" >
         <h3>The words <code>crouch</code> and <code>pounce</code> allow references to stack values by name</h3>

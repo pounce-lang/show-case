@@ -68,7 +68,22 @@ export const CorePounces = () => {
         <h3>[List Operation] split</h3>
         <p> featured in quick sort, <code>split</code> cuts an array in two. Here <code>t</code> is the value that distinguishes which elements of <code>[ u f v r x o s]</code> are placed in the first or second result, as compared by <code>[>]</code></p>
         <PounceCat pounceCode="t [ u f v r x o s] [>] split" ></PounceCat>
-      </div>       
+      </div>
+      <div className="Feature-child" >
+        <h3><code>linrec</code> Linear Recursion</h3>
+        <p>Linear recursion (<code>linrec</code>) takes four phrases:
+          <ol>
+          <li>an end condition </li>
+          <li>cleanup after end condition is true </li>
+          <li>the reqursive phrase</li>
+          <li>tail phrase, queued up after each reqursion</li>
+          </ol>
+          here is a version of map
+        </p>
+        <PounceCat pounceCode={`[1 2 3] [2 *] 
+[length 0 =] [] [dup 1 -] [*] linrec`} ></PounceCat>
+      </div>
+     
     </div>
   );
 };
