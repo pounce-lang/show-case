@@ -64,7 +64,7 @@ export const CorePounces = () => {
         <p> </p>
         <PounceCat pounceCode="[u f v] [r x o s] concat" ></PounceCat>
       </div>
-      <div className="Feature-child" >
+      <div className="Feature-child double-wide" >
         <h3>[List Operation] split</h3>
         <p> featured in quick sort, <code>split</code> cuts an array in two. Here <code>t</code> is the value that distinguishes which elements of <code>[ u f v r x o s]</code> are placed in the first or second result, as compared by <code>[>]</code></p>
         <PounceCat pounceCode="t [ u f v r x o s] [>] split" ></PounceCat>
@@ -73,15 +73,22 @@ export const CorePounces = () => {
         <h3><code>linrec</code> Linear Recursion</h3>
         <p>Linear recursion (<code>linrec</code>) takes four phrases:
           <ol>
-          <li>an end condition </li>
-          <li>cleanup after end condition is true </li>
-          <li>the reqursive phrase</li>
-          <li>tail phrase, queued up after each reqursion</li>
+          <li>an <em>end condition</em> to determine if the reqursion terminates</li>
+          <li><em>cleanup</em> after end condition evaluetes as true </li>
+          <li>the <em>reqursive step</em></li>
+          <li>a <em>tail</em> phrase, queued up after each reqursion</li>
           </ol>
           here is a version of map
         </p>
-        <PounceCat pounceCode={`[1 2 3] [2 *] 
-[length 0 =] [] [dup 1 -] [*] linrec`} ></PounceCat>
+        <PounceCat pounceCode={`[] [1 2 3] [2 *]
+# 1 terminate the recursion when the list is empty
+[[size 0 <=] dip swap]
+# 2 clean up
+[drop drop]
+# 3 the reqursive is a little long, having to rearrage the stack a bit... 
+[ dup swap [rollup] dip [uncons swap] dip play swap [push] dip rolldown] 
+# 4
+[] linrec`} ></PounceCat>
       </div>
      
     </div>
