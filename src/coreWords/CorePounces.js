@@ -7,8 +7,8 @@ export const CorePounces = () => {
       <div className="Feature-child double-wide">
         <h3>Pounce Words</h3>
         <p>Pounce can introspect on its' own words with the core word <code>words</code>, Each word is documented below.
-  Pounce words are divided up into these types [Arithmetic, Stack, List, Flow and Introspection].
-</p><PounceCat pounceCode="words" ></PounceCat></div>
+          Pounce words are divided up into these types [Arithmetic, Stack, List, Flow and Introspection].
+        </p><PounceCat pounceCode="words" ></PounceCat></div>
       <div className="Feature-child" >
         <h3>[Arithmetic] + - </h3>
         <p>basic arithmetic with words <code>+</code> <code>-</code> <code>*</code> and <code>/</code>.
@@ -26,12 +26,12 @@ export const CorePounces = () => {
       <div className="Feature-child double-wide" >
         <h3>[Flow] crouch</h3>
         <p> The word <code>crouch</code> copies named stack items into a phrase. </p>
-        <p> Crouch consumes stack elements and copies them, by name. 
-          For example, <code>m</code> and <code>b[List Operation] </code> are names, to be associated with stack values <code>4</code> and <code>-1</code>. For each name, a value is popped off of the stack and any name in the phrase is replaced with the value. 
+        <p> Crouch consumes stack elements and copies them, by name.
+          For example, <code>m</code> and <code>b[List Operation] </code> are names, to be associated with stack values <code>4</code> and <code>-1</code>. For each name, a value is popped off of the stack and any name in the phrase is replaced with the value.
           The resulting phrase can be used as a function of x for a specific line. Later provided with an 'x' value on the stack, the phrase can be run.</p>
         <PounceCat pounceCode={`# y = mx + b
 4 -1 [m b] [m * b +] crouch`} ></PounceCat>
-<p> Or if you had an array of 'x' values, this phrase could be mapped, yielding an array of coresponding 'y' values.</p>
+        <p> Or if you had an array of 'x' values, this phrase could be mapped, yielding an array of coresponding 'y' values.</p>
         <PounceCat pounceCode={`[1 2 3] [4 * -1 +] map`} ></PounceCat>
       </div>
       <div className="Feature-child" >
@@ -64,33 +64,32 @@ export const CorePounces = () => {
         <p> </p>
         <PounceCat pounceCode="[u f v] [r x o s] concat" ></PounceCat>
       </div>
-      <div className="Feature-child double-wide" >
+      <div className="Feature-child" >
         <h3>[List Operation] split</h3>
         <p> featured in quick sort, <code>split</code> cuts an array in two. Here <code>t</code> is the value that distinguishes which elements of <code>[ u f v r x o s]</code> are placed in the first or second result, as compared by <code>[>]</code></p>
         <PounceCat pounceCode="t [ u f v r x o s] [>] split" ></PounceCat>
       </div>
-      <div className="Feature-child" >
+      <div className="Feature-child double-wide" >
         <h3><code>linrec</code> Linear Recursion</h3>
         <p>Linear recursion (<code>linrec</code>) takes four phrases:
           <ol>
-          <li>an <em>end condition</em> to determine if the reqursion terminates</li>
-          <li><em>cleanup</em> after end condition evaluetes as true </li>
-          <li>the <em>reqursive step</em></li>
-          <li>a <em>tail</em> phrase, queued up after each reqursion</li>
+            <li>an <em>end condition</em> to determine if the reqursion terminates</li>
+            <li><em>cleanup</em> after end condition evaluetes as true </li>
+            <li>the <em>reqursive step</em></li>
+            <li>a <em>tail</em> phrase, queued up after each reqursive step</li>
           </ol>
-          here is a version of map
+          here is a version of <code>map</code> using <code>linrec</code>
         </p>
         <PounceCat pounceCode={`[] [1 2 3] [2 *]
 # 1 terminate the recursion when the list is empty
 [[size 0 <=] dip swap]
 # 2 clean up
 [drop drop]
-# 3 the reqursive is a little long, having to rearrage the stack a bit... 
+# 3 the reqursive step, having to rearrage the stack a bit make it long
 [ dup swap [rollup] dip [uncons swap] dip play swap [push] dip rolldown] 
 # 4
 [] linrec`} ></PounceCat>
       </div>
-     
     </div>
   );
 };
