@@ -87,11 +87,11 @@ export const IntroPounces = () => {
         <h3>Quicksort</h3>
         <p>Given a list of numbers to sort, binary recursion. <code>binrec</code> is used to process both sub lists made by <code>[&gt;] split</code></p>
         <PounceCat pounceCode={`[6 3 8 4 5 7 2 9 1] 
-[size 1 <=] [] [uncons [>] split] [concat] binrec
+[size 1 <=] [] [uncons [>=] split] [concat] binrec
 `} ></PounceCat>
         <p>A list of strings, same deal.</p>
         <PounceCat pounceCode={`[e b a g f h c i d]
-[size 1 <=] [] [uncons [>] split] [concat] binrec
+[size 1 <=] [] [uncons [>=] split] [concat] binrec
 `} ></PounceCat>
       </div>
     </div>
