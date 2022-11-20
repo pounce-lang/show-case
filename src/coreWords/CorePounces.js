@@ -19,9 +19,9 @@ export const CorePounces = () => {
         <PounceCat pounceCode="22 7 /" ></PounceCat>
       </div>
       <div className="Feature-child" >
-        <h3>[Flow] play</h3>
-        <p> The word <code>play</code> enables a phrase as code, here dequoting and 'playing' <code>[2 /]</code> back</p>
-        <PounceCat pounceCode={"7 [2 /] play"} ></PounceCat>
+        <h3>[Flow] leap</h3>
+        <p> The word <code>leap</code> enables a phrase as code, here dequoting and 'playing' <code>[2 /]</code> back</p>
+        <PounceCat pounceCode={"7 [2 /] leap"} ></PounceCat>
       </div>
       <div className="Feature-child double-wide" >
         <h3>[Flow] crouch</h3>
@@ -33,10 +33,13 @@ export const CorePounces = () => {
 4 -1 [m b] [m * b +] crouch`} ></PounceCat>
         <p> Or if you had an array of 'x' values, this phrase could be mapped, yielding an array of coresponding 'y' values.</p>
         <PounceCat pounceCode={`[1 2 3] [4 * -1 +] map`} ></PounceCat>
+        <p> Crouch </p>
+        <PounceCat pounceCode={`# y = mx + b
+4 -1 [m b] [m * b +] crouch`} ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3>[Flow] pounce</h3>
-        <p> The word <code>pounce</code> copies stack items into a <code>[phrase]</code>, just like crouch, then immediately <code>play</code>s that phrase</p>
+        <p> The word <code>pounce</code> copies stack items into a <code>[phrase]</code>, just like crouch, then immediately <code>leap</code>s that phrase</p>
         <PounceCat pounceCode={`# y = mx + b
 4 0 0.5 [m b x] [m x * b +] pounce`} ></PounceCat>
       </div>
@@ -86,7 +89,7 @@ export const CorePounces = () => {
 # 2 clean up
 [drop drop]
 # 3 the reqursive step, having to rearrage the stack a bit make it long
-[ dup swap [rollup] dip [uncons swap] dip play swap [push] dip rolldown] 
+[ dup swap [rollup] dip [uncons swap] dip leap swap [push] dip rolldown] 
 # 4
 [] linrec`} ></PounceCat>
       </div>

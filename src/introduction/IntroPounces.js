@@ -26,7 +26,7 @@ export const IntroPounces = () => {
         <p>Words can be placed in a list where they are considered as nouns. For example <code>cons</code> is used to make a list of 10 and * </p>
         <PounceCat pounceCode="10 [*] cons" ></PounceCat>
         <p>A list is sometimes called a 'phrase' when the intent is to recite the phrase as a verb at some later time, like this:</p>
-        <PounceCat pounceCode="5 [10 *] play" ></PounceCat>
+        <PounceCat pounceCode="5 [10 *] leap" ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3>Fibonacci Numbers</h3>
@@ -76,7 +76,7 @@ export const IntroPounces = () => {
       </div>
       <div className="Feature-child" >
         <h3>Map Filter Reduce</h3>
-        <p>Stating with a list of numbers, <code>map</code> a phrase (play the phrase as a function on each element) <code>[2 *]</code>.</p>
+        <p>Stating with a list of numbers, <code>map</code> runs a phrase (as a function) on each element of the list <code>[2 *]</code>.</p>
         <PounceCat pounceCode={`[6 3 8 4 5 7 2 9 1] [2 *] map`} ></PounceCat>
         <p><code>filter</code> a list with a match phrase (even numbers) <code>[2 % 0 ==]</code>.</p>
         <PounceCat pounceCode={`[6 3 8 4 5 7 2 9 1] [2 % 0 ==] filter`} ></PounceCat>

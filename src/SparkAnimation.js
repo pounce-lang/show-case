@@ -1,6 +1,6 @@
 // import { useAnimatedSparkline } from "./useAnimatedSparkline";
 
-// //   const [sparkRefs] = useAnimatedSparkline(" [1 2 3 4 5 6 7 8 9] swap [] cons [+ 9 %] concat play");
+// //   const [sparkRefs] = useAnimatedSparkline(" [1 2 3 4 5 6 7 8 9] swap [] cons [+ 9 %] concat leap");
 
 // const SparkAnimation = ({ pounceProgram }) => {
 //     const [sparkRef] = useAnimatedSparkline(pounceProgram);

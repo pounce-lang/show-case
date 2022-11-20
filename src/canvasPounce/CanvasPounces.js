@@ -13,7 +13,7 @@ const CanvasPounces = () => {
   const [pounceAmimation, setPounceAnimation] = useState(
     `[0 outAt 0 outAt [3 outAt] dip + 700 [a m][a 0 > [a m %][m] if-else] pounce 0 inAt 
   1 outAt [4 outAt] dip + 400 [a m][a 0 > [a m %][m] if-else] pounce 1 inAt 
-  2 outAt [5 outAt] dip + 360 [a m][a 0 > [a m %][m] if-else] pounce 2 inAt 0 inAt] dup dip2 play`);
+  2 outAt [5 outAt] dip + 360 [a m][a 0 > [a m %][m] if-else] pounce 2 inAt 0 inAt] dup dip2 leap`);
   const [pounceKeyHandler, setPounceKeyHandler] = useState(
     `[0 outAt 2 outAt 3 + 2 inAt 0 outAt 700 % 1 + 0 inAt 1 outAt 1 - dup 0 < [drop 400][] if-else 1 inAt 0 inAt] dip2`);
   return (
@@ -65,7 +65,7 @@ const CanvasPounces = () => {
       {/* <div className="Feature-child" >
         <h3>Sparkline Animations</h3>
         <p>Super Experimental: Animation of Sparklines as a function of time.</p>
-        <SparkAnimation pounceCode={" [1 2 3 4 5 6 7 8 9] swap [] cons [+ 9 %] concat play"} ></SparkAnimation>
+        <SparkAnimation pounceCode={" [1 2 3 4 5 6 7 8 9] swap [] cons [+ 9 %] concat leap"} ></SparkAnimation>
       </div> */}
 
       <div className="Feature-child" >
