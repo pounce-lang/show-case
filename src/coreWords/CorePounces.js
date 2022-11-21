@@ -29,13 +29,17 @@ export const CorePounces = () => {
         <p> Crouch consumes stack elements and copies them, by name.
           For example, <code>m</code> and <code>b[List Operation] </code> are names, to be associated with stack values <code>4</code> and <code>-1</code>. For each name, a value is popped off of the stack and any name in the phrase is replaced with the value.
           The resulting phrase can be used as a function of x for a specific line. Later provided with an 'x' value on the stack, the phrase can be run.</p>
-        <PounceCat pounceCode={`# y = mx + b
-4 -1 [m b] [m * b +] crouch`} ></PounceCat>
+        <PounceCat pounceCode={`# for a line y = mx + b
+4 -1 [m b] [m * b +] crouch
+dup # making a copy so that we can see the phrase and also run it
+# with an x value
+5 swap leap # we have calculated the y for x = 5`} ></PounceCat>
         <p> Or if you had an array of 'x' values, this phrase could be mapped, yielding an array of coresponding 'y' values.</p>
-        <PounceCat pounceCode={`[1 2 3] [4 * -1 +] map`} ></PounceCat>
-        <p> Crouch </p>
-        <PounceCat pounceCode={`# y = mx + b
-4 -1 [m b] [m * b +] crouch`} ></PounceCat>
+        <PounceCat pounceCode={`[0 1 2 3 4 5] [4 * -1 +] map "'the y result for each given x value'"`} ></PounceCat>
+        <p> Crouch can also de-structure nested lists. </p>
+        <PounceCat pounceCode={`1 [ 2 [3 4 [5 6]]] 
+[one [two [three four list_of_5_6]]]
+[one two three four list_of_5_6] crouch`} ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3>[Flow] pounce</h3>

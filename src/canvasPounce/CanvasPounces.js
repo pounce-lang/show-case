@@ -44,9 +44,9 @@ const CanvasPounces = () => {
           canvasWidth={792} canvasHeight={400}
         ></GamePlay>
       </div>
-      <div className="Feature-child" >
+      <div className="Feature-child double-wide" >
         <h3>Sparklines of Lists</h3>
-        <p> Experimental: Sparklines of <code>map</code> operations on lists (i.e. arrays of data).</p>
+        <p> Experimental: Sparklines of <code>map</code> operations on lists (tiny line charts of data).</p>
         <PounceSparkline pounceCode={`[1 2 3 4 5 6 7 8 9] dup 
 [5 -] map dup
 [abs] map dup
@@ -56,25 +56,10 @@ const CanvasPounces = () => {
 [abs] map dup
 [-1 * -9 +] map  dup
 [0 max] map
-[] 0 [.314 + dup [push] dip ] 20 times drop
+[] 0 [.164 + dup [push] dip ] 30 times drop
 [sin]
 [.628 +] swap concat [dup * .5 -] concat
- map
-`} ></PounceSparkline>
-      </div>
-      {/* <div className="Feature-child" >
-        <h3>Sparkline Animations</h3>
-        <p>Super Experimental: Animation of Sparklines as a function of time.</p>
-        <SparkAnimation pounceCode={" [1 2 3 4 5 6 7 8 9] swap [] cons [+ 9 %] concat leap"} ></SparkAnimation>
-      </div> */}
-
-      <div className="Feature-child" >
-        <h3>Animation basic test </h3>
-        <p><code>WIP</code>
-        </p>
-        <GamePlay pounceStack={[[[100, 100, 0], [40, 40], [60, 50], [40, 60]]]}
-          pounceProgram={[0, 'outAt', 2, 'outAt', 3, '+', 2, 'inAt', 0, 'inAt']}
-          canvasWidth={400} canvasHeight={300} ></GamePlay>
+ map dup [abs -1 *] map`} ></PounceSparkline>
       </div>
     </div>
   );
