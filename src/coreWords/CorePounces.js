@@ -20,14 +20,16 @@ export const CorePounces = () => {
       </div>
       <div className="Feature-child" >
         <h3>[Flow] leap</h3>
-        <p> The word <code>leap</code> enables a phrase as code, here dequoting and 'playing' <code>[2 /]</code> back</p>
+        <p> The word <code>leap</code> enables a phrase to be run as code, here <code>[2 /]</code> leaps out of the brackets and yields a result</p>
         <PounceCat pounceCode={"7 [2 /] leap"} ></PounceCat>
+        <p> <code>leap</code> can also be used to simply flatten data</p>
+        <PounceCat pounceCode={"[2 4 6 8] leap"} ></PounceCat>
       </div>
       <div className="Feature-child double-wide" >
         <h3>[Flow] crouch</h3>
         <p> The word <code>crouch</code> copies named stack items into a phrase. </p>
         <p> Crouch consumes stack elements and copies them, by name.
-          For example, <code>m</code> and <code>b[List Operation] </code> are names, to be associated with stack values <code>4</code> and <code>-1</code>. For each name, a value is popped off of the stack and any name in the phrase is replaced with the value.
+          For example, <code>m</code> and <code>b</code> are names, to be associated with stack values <code>4</code> and <code>-1</code>. For each name, a value is popped off of the stack and any name in the phrase is replaced with the value.
           The resulting phrase can be used as a function of x for a specific line. Later provided with an 'x' value on the stack, the phrase can be run.</p>
         <PounceCat pounceCode={`# for a line y = mx + b
 4 -1 [m b] [m * b +] crouch
