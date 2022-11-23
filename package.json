@@ -1,10 +1,10 @@
 {
   "name": "pounce-lang-show-case",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "private": true,
   "homepage": "/",
   "dependencies": {
-    "@pounce-lang/core": "^3.0.0",
+    "@pounce-lang/core": "^3.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "6.2.1",

@@ -82,6 +82,11 @@ export const IntroPounces = () => {
         <PounceCat pounceCode={`[6 3 8 4 5 7 2 9 1] [2 % 0 ==] filter`} ></PounceCat>
         <p><code>reduce</code> a list by starting with <code>1</code> and accumulating a value with <code>[*]</code></p>
         <PounceCat pounceCode={`[6 3 8 4 5 7 2 9 1] 1 [*] reduce`} ></PounceCat>
+        <p>Combining <code>reduce</code> with <code>pounce</code>can make a more complex reducer easier to understand</p>
+        <PounceCat pounceCode={`[1 2 3 4 5 6 7]
+[1 0] 
+[[[acc i] e] [e acc [i 2 % 0 ==] [*] [+] ifte 1 i + [] cons cons] pounce] 
+reduce`} ></PounceCat>
       </div>
       <div className="Feature-child" >
         <h3>Quicksort</h3>
