@@ -15,24 +15,24 @@ const CanvasPounces = () => {
   1 outAt [4 outAt] dip + 400 [a m][a 0 > [a m %][m] if-else] pounce 1 inAt 
   2 outAt [5 outAt] dip + 360 [a m][a 0 > [a m %][m] if-else] pounce 2 inAt 0 inAt] dup dip2 leap`);
   const [pounceKeyHandler, setPounceKeyHandler] = useState(
-    `[0 outAt 2 outAt 3 + 2 inAt 0 outAt 700 % 1 + 0 inAt 1 outAt 1 - dup 0 < [drop 400][] if-else 1 inAt 0 inAt] dip2`);
+    `j == [[0 outAt 2 outAt -4 + 2 inAt] dip2] [[0 outAt 2 outAt 4 + 2 inAt] dip2] if-else`);
   return (
     <div className="Feature-parent">
       <div className="Feature-child double-wide" >
         <h3>Asteroids</h3>
-        <p> <textarea rows="4"
+        <p>data: <textarea rows="4"
           className="pounceCat-input"
           wrap="true" value={src}
           onChange={(e) => setSrc(e.target.value)}
           spellCheck="false"
-        ></textarea>
-          <textarea rows="4"
+        ></textarea><br />
+          update on tick: <textarea rows="4"
             className="pounceCat-input"
             wrap="true" value={pounceAmimation}
             onChange={(e) => setPounceAnimation(e.target.value)}
             spellCheck="false"
-          ></textarea>
-          <textarea rows="4"
+          ></textarea><br />
+          key handler: <textarea rows="4"
             className="pounceCat-input"
             wrap="true" value={pounceKeyHandler}
             onChange={(e) => setPounceKeyHandler(e.target.value)}

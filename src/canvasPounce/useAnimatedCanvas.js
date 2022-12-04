@@ -97,20 +97,18 @@ export function useAnimatedCanvas(pounceState, animationStep, pounceKeyHandler, 
   }, [ref, pounceStack, pounceProgram, pounceKeyProgram, key]);
 
   const keyEventTrigger = (k) => {
-    console.log(`got ${key}`);
     key = k;
     if (key !== lastKey && pounceKeyProgram) {
       console.log(`render ${key}`);
 
       lastKey = '0';
-      key = '0';
       let canvas = ref.current;
       let ctx = canvas.getContext('2d');
-      console.log("pounceKeyProgram", pounceKeyProgram);
-      console.log("pounceStack", pounceStack);
+      //console.log("pounceKeyProgram", pounceKeyProgram);
+      //console.log("pounceStack", pounceStack);
 
-      const program = r.concat(pounceStack, pounceKeyProgram);
-      //console.log(program);
+      const program = r.concat(pounceStack, r.concat([key], pounceKeyProgram));
+      console.log(program);
       const cat = interpreter(program);
 
       // console.log(cat);
